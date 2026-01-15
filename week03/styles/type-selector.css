@@ -1,0 +1,12 @@
+body {
+  font-family: sans-serif;
+}
+
+span {
+  background-color: yellow;
+}
+
+strong, em {
+  color: rebeccapurple;
+}
+
