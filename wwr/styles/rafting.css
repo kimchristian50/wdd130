@@ -1,18 +1,13 @@
 :root {
     --primary-color: #b86f2b;
     /* tan mountain color from the logo */
-    --secondary-color: #a75331;
-    /* brown mountain color from the logo */
-    --accent1-color: #c7ae14;
-    /* yellow-green ground color from the logo */
+    /* --secondary-color: #a75331; */     /* brown mountain color from the logo */
+    /* --accent1-color: #c7ae14; */      /* yellow-green ground color from the logo */
     --accent2-color: #175681;
     /* dark blue river color from the logo */
-    --accent3-color: #95d9fe;
-    /* light blue sky color from the logo */
+    /* --accent3-color: #95d9fe; */      /* light blue sky color from the logo */
     --accent4-color: #e4c752;
     /* yellow ground color from the logo */
-    --border-color: black;
-    --border2-color: white;
     --heading-font: "Times New roman", "Georgia", serif;
     --body-font: Arial, Helvetica, sans-serif;
 }
@@ -62,6 +57,10 @@ article {
     display: block;
     width: 100%;
     height: auto;
+}
+
+.hero article {
+    margin: 15px;
 }
 
 h1 {
