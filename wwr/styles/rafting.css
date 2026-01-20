@@ -1,14 +1,12 @@
 :root {
-    --primary-color: #b86f2b;
-    /* tan mountain color from the logo */
+    --primary-color: #975c25; /* tan mountain color from the logo but slightly darker */
     
-    --accent-color: #175681;
-    /* dark blue river color from the logo */
+    --accent-color: #175681; /* dark blue river color from the logo */
  
-    --accent2-color: #e4c752;
-    /* yellow ground color from the logo */
-    --heading-font: "Times New roman", "Georgia", serif;
-    --body-font: Arial, Helvetica, sans-serif;
+    --accent2-color: #e4c752; /* yellow ground color from the logo */
+    --accent3-color: black;
+    --heading-font: "Garamond", "Georgia", serif;
+    --body-font: Verdana, Helvetica, sans-serif;
 }
 
 * {
@@ -19,7 +17,7 @@
 
 header {
     background-color: var(--primary-color);
-    color: var(--accent-color);
+    color: var(--accent3-color);
 }
 
 body {
