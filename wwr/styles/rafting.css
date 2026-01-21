@@ -6,7 +6,7 @@
     --accent2-color: #e4c752; /* yellow ground color from the logo */
     --accent3-color: black;
     --heading-font: "Garamond", "Georgia", serif;
-    --body-font: Verdana, Helvetica, sans-serif;
+    --body-font: Verdana, Helvetica, sans-serif; 
 }
 
 * {
