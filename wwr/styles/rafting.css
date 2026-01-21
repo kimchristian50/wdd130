@@ -4,7 +4,7 @@
     --accent-color: #175681; /* dark blue river color from the logo */
  
     --accent2-color: #e4c752; /* yellow ground color from the logo */
-    --accent3-color: white;
+    --accent3-color: white; /* white text so the contrast will work with the darker header */
     --heading-font: "Garamond", "Georgia", serif;
     --body-font: Verdana, Helvetica, sans-serif; 
 }
