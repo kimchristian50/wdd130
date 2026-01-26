@@ -48,6 +48,7 @@ header img {
       width: 100%;
       text-align: center;
       transition: 0.3s;
+      text-decoration: none;
 }
 
 .navigation a:hover {
@@ -207,9 +208,17 @@ footer p {
     font-size: 0.8rem;
 }
 
+footer a {
+    text-decoration: none;
+}
+
 .socialmedia {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     gap: 15px;
+}
+
+.socialmedia a {
+    text-decoration: none;
 }
