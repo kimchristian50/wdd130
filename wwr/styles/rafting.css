@@ -1,11 +1,9 @@
 :root {
     --primary-color: #975c25; /* tan mountain color from the logo but slightly darker */
-    
-    --accent-color: #175681; /* dark blue river color from the logo */
- 
-    --accent2-color: #e4c752; /* yellow ground color from the logo */
-    --accent3-color: white; /* white text so the contrast will work with the darker header */
-    --heading-font: "Garamond", "Georgia", serif;
+        --accent-color: #175681; /* dark blue river color from the logo */
+     --accent2-color: #e4c752; /* yellow ground color from the logo */
+    --accent3-color: #f5ebc3; /* lighter version of yellow ground color from the logo */
+    --heading-font: Verdana, Helvetica, sans-serif;
     --body-font: Verdana, Helvetica, sans-serif; 
 }
 
@@ -16,8 +14,45 @@
 }
 
 header {
-    background-color: var(--primary-color);
-    color: var(--accent3-color);
+    background-color: var(--accent3-color);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    border-bottom: 3px solid var(--accent-color);
+    padding: 10px 20px;
+}
+
+header img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.navigation {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+}
+
+.navigation li {
+    flex: 1 1 auto;
+    display: flex;
+}
+
+.navigation a {
+      text-decoration: none;
+      color: var(--accent-color);
+      font-weight: bold;
+      padding: 5px 5px;
+      display: block;
+      width: 100%;
+      text-align: center;
+      transition: 0.3s;
+}
+
+.navigation a:hover {
+    color: var(--primary-color);
+    background-color: rgba(0,0,0,0.05);
 }
 
 body {
@@ -25,25 +60,19 @@ body {
     color: var(--accent-color);
 }
 
-header,
-main,
-footer {
+nav, p, section, article {
+    margin: 15px;
+    padding: 8px;
+}
+
+header, main, footer {
     width: 840px;
     margin: 0 auto;
 }
 
-h1,
-h2 {
+h1, h2 {
     font-family: var(--heading-font);
     color: var(--primary-color);
-}
-
-nav,
-p,
-section,
-article {
-    margin: 15px;
-    padding: 8px;
 }
 
 .hero {
@@ -56,14 +85,13 @@ article {
     height: auto;
 }
 
-
 .hero h1 {
     position: absolute;
     top: 20px;
     width: 100%;
     padding: 16px;
     text-align: center;
-    opacity: 0.8;
+    opacity: 0.9;
     background-color: var(--accent-color);
     color: white;
 }
@@ -87,7 +115,101 @@ article {
     margin: 10px 10px 10px 16px;
 }
 
-.socialmedia a {
-    text-decoration: none;
-    margin: 20px;
+.history-grid {
+    display: grid;
+    grid-template-columns: 1.2fr .6fr 1.2fr;
+    align-items: stretch;
+    gap: 20px;
+    padding: 0px 20px 20px 20px;
+    border-radius: 8px;
+    background-color: var(--accent3-color);
+    border: 1px solid var(--primary-color);
+    margin: 20px 0;
+}
+
+.history-grid p {
+    padding: 20px;
+    margin: 0;
+}
+
+.history-title {
+    grid-column: 1 / 4;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 10px;
+    border-bottom: 2px solid var(--accent2-color);
+    color: var(--accent-color)
+}
+
+.history-image img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    border: 5px solid white;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+}
+
+.adventure-container {
+    padding: 20px 0;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.adventure {
+    text-align: center;
+    margin-bottom: 0;
+    color: var(--accent-color);
+    font-family: var(--heading-font);
+}
+
+.image-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+    margin: 0 0 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.image-row figure {
+    flex: 1;
+    margin: 5px;
+    text-align: center;
+}
+
+.image-row img {
+    width: 100%;
+    border: 2px solid var(--primary-color);
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+.image-row figcaption {
+    font-size: 0.8rem;
+    margin-top: 8px;
+    color: var(--accent-color);
+}
+
+footer {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    border-radius: 8px;
+    background-color: var(--accent3-color);
+    border: 1px solid var(--primary-color);
+    padding: 10px 20px;
+    margin-top: 30px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.8rem;
+}
+
+.socialmedia {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
 }
