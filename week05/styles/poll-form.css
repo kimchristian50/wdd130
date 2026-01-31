@@ -106,7 +106,8 @@ footer {
     text-align: center;
     font-size: 0.8rem;
     color: #777;
-    border-top: 1px solid #ccc;
+    /* border-top: 1px solid #ccc; */
+    border: 1px solid #0000;
 }
 
 .form-item {
