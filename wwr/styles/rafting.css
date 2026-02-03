@@ -336,7 +336,7 @@ fieldset {
 button {
     margin: 0 auto;
     background-color: var(--primary-color);
-    color: #fff;
+    color: rgb(255 255 255);
     border: none;
     border-radius: 0.5rem;
     padding: 1rem;
