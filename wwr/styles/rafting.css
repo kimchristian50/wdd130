@@ -78,6 +78,7 @@ h1, h2 {
 
 .hero {
     position: relative;
+    display: grid;
 }
 
 .hero img {
@@ -148,7 +149,7 @@ h1, h2 {
     border: 1px solid var(--primary-color);
 }
 
-.history-grid {
+.history-grid, .expect-grid {
     display: grid;
     grid-template-columns: 1.2fr .6fr 1.2fr;
     align-items: stretch;
@@ -160,12 +161,22 @@ h1, h2 {
     margin: 20px 0;
 }
 
-.history-grid p {
+.expect-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+}
+
+.history-grid p, .expect-grid p {
     padding: 20px;
     margin: 0;
 }
 
-.history-title {
+.expect-grid p {
+    padding: 0 10px;
+    margin-top: 0px;
+}
+
+.history-title, .expect-title {
     grid-column: 1 / 4;
     text-align: center;
     margin-top: 0;
@@ -175,7 +186,7 @@ h1, h2 {
     color: var(--accent-color)
 }
 
-.history-image img {
+.history-image img, .expect-image img {
     width: 100%;
     height: auto;
     margin: 0;
@@ -195,6 +206,37 @@ h1, h2 {
     margin-bottom: 0;
     color: var(--accent-color);
     font-family: var(--heading-font);
+}
+
+.trip-container {
+    text-align: center;
+    width: 850px;
+}
+
+.trip-container h1 {
+    color: var(--accent-color);
+    font-family: var(--heading-font); 
+    margin: 20px;
+    }
+
+.trips {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    margin-bottom: 0;
+    color: var(--accent-color);
+    font-family: var(--heading-font);
+    grid-gap: 5px;
+}
+
+.trips img {
+    width: 250px;
+    border: 2px solid var(--primary-color);
+    box-shadow: 2px 2px 5px rgb(0,0,0, 20%);
+}
+
+.trip-text {
+    text-align: left;
 }
 
 .image-row {
@@ -319,7 +361,7 @@ textarea {
     box-shadow: 2px 2px 5px rgb(0,0,0, 10%);
 }
 
-.image-row figcaption, .employee-image-row figcaption {
+.image-row figcaption, .employee-image-row figcaption, .trips figcaption {
     font-size: 0.8rem;
     margin-top: 8px;
     color: var(--accent-color);
@@ -356,6 +398,128 @@ button:hover {
 button:active {
     transform: translateY(0);
     box-shadow: 0 2px 5px rgba(56, 102, 65, 0.4);
+}
+
+.booking-now {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-row: 1 / 3;
+}
+
+.booking-now img,
+.booking-link {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.booking-now img {
+  /* filter: blur(1px); */
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.booking-text {
+    background-color: rgba(23, 86, 129, 0.8);
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    z-index: 1;
+    width: 300px;
+}
+
+.booking-text h2 {
+    color: white;
+}
+
+.booking-link {
+    text-decoration: none;
+    z-index: 1;
+    align-self: end;
+    box-shadow: 0 4px 10px rgba(7, 74, 112, 0.3);
+}
+
+.booking-link:hover .booking-text {
+    background-color: var(--accent-color);
+    transform: scale(1.05);
+    transition: 0.3s ease;
+}
+
+.call-to-action-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+    padding: 10px;
+    margin: 10px auto;
+    column-gap: 20px;
+    row-gap: 5px;
+    align-items: start;
+}
+
+.form-review-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-self: start;
+}
+
+.cta-form {
+    grid-gap: 8px;
+    align-self: start;
+}
+
+.cta-item {
+    margin-bottom: 5px;
+}
+
+.cta-button {
+    padding: 0.6rem;
+    margin-top: 5px;
+    width: auto;
+}
+
+.review p {
+    background-color: rgb(250, 248, 242);
+    padding: 1.5rem;
+    border: 1px solid darkgray
+}
+
+.connect {
+    grid-column: 2 / 3;
+}
+
+.trip-table {
+    width: 100%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    border: 2px solid var(--primary-color);
+    letter-spacing: 1px;
+    font-family: var(--body-font);
+}
+
+.trip-table caption {
+    caption-side: top;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.trip-table th, .trip-table td {
+    border: 1px solid var(--primary-color);
+    padding: 8px 12px;
+    text-align: center;
+}
+
+.trip-table thead th {
+    background-color: var(--accent2-color);
+    color: var(--accent-color);
+    font-weight: 700;
+}
+
+.trip-table .row-even {
+    background-color: lightgray;
 }
 
 footer {
